@@ -2,8 +2,16 @@ package ch05;
 
 class Apple {
   float mass;
-  float diameter = 1.0f;
+  private float diameter = 1.0f;
   int x, y;
+
+  public float getDiameter() {
+    return diameter;
+  }
+
+  public void setDiameter(float diameter) {
+    this.diameter = diameter;
+  }
 
   boolean isTouching(Apple others) {
     double xdiff = x - others.x;
