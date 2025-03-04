@@ -6,6 +6,14 @@ class Apple {
   int x, y;
 
   boolean isTouching(Apple others) {
+    double xdiff = x - others.x;
+    double ydiff = y - others.y;
+    double distance = Math.sqrt(xdiff * xdiff + ydiff * ydiff);
+
+    if (distance < diameter / 2 + others.diameter / 2) {
+      return true;
+    }
+
     return false;
   }
 
