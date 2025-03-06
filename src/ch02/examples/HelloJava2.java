@@ -1,3 +1,5 @@
+package ch02.examples;
+
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;

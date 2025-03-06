@@ -1,3 +1,5 @@
+package ch02.examples;
+
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
