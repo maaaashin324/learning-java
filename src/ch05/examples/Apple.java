@@ -31,7 +31,16 @@ class Apple {
 
   public void printDetails() {
     System.out.println("mass of a1 is : " + mass);
-    System.out.println("diameter of a1 is : " + diameter);
+    // System.out.println("diameter of a1 is : " + diameter);
+    String[] sizes = getAppleSizes();
+    if (diameter < 5.0f) {
+      System.out.println(sizes[SMALL]);
+    } else if (diameter < 10.0f) {
+      System.out.println(sizes[MEDIUM]);
+    } else {
+      System.out.println(sizes[LARGE]);
+    }
+    
     System.out.println("position of a1 is : (" + x + ", " + y + ")");
   }
 
