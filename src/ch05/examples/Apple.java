@@ -61,6 +61,34 @@ class Apple {
     return;
   }
 
+  public static Apple createApple(int size) {
+    switch (size) {
+      case Apple.SMALL:
+        Apple a = new Apple();
+        a.x = 10;
+        a.y = 10;
+        a.diameter = 3.0f;
+        a.mass = 0.1f;
+        return a;
+      case Apple.MEDIUM:
+        Apple b = new Apple();
+        b.x = 20;
+        b.y = 20;
+        b.diameter = 5.0f;
+        b.mass = 0.2f;
+        return b;
+      case Apple.LARGE:
+        Apple c = new Apple();
+        c.x = 30;
+        c.y = 30;
+        c.diameter = 7.0f;
+        c.mass = 0.3f;
+        return c;
+      default:
+        return null;
+    }
+  }
+
   public static String[] getAppleSizes() {
     return new String[] {"SMALL", "MEDIUM", "LARGE"};
   }
