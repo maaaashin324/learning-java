@@ -1,4 +1,4 @@
-package ch05;
+package ch05.examples;
 
 class PrintAppleDetails4 {
   public static void main(String args[]) {

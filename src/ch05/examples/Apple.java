@@ -1,4 +1,4 @@
-package ch05;
+package ch05.examples;
 
 class Apple {
   float mass;

@@ -1,4 +1,4 @@
-package ch05;
+package ch05.examples;
 
 public class Field {
   Apple a1 = new Apple();
