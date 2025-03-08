@@ -1,6 +1,10 @@
 package ch05.examples;
 
 class Apple {
+  public static final int SMALL = 0;
+  public static final int MEDIUM = 1;
+  public static final int LARGE = 2;
+
   float mass;
   private float diameter = 1.0f;
   int x, y;
@@ -46,5 +50,9 @@ class Apple {
     this.y = (int)diameter;
 
     return;
+  }
+
+  public static String[] getAppleSizes() {
+    return new String[] {"SMALL", "MEDIUM", "LARGE"};
   }
 }
