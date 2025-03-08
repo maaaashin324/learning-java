@@ -30,4 +30,9 @@ class Apple {
     System.out.println("diameter of a1 is : " + diameter);
     System.out.println("position of a1 is : (" + x + ", " + y + ")");
   }
+
+  public void moveTo(int x, int y) {
+    String output = String.format("Apple is moving to (%d, %d)", x, y);
+    System.out.println(output);
+  }
 }
