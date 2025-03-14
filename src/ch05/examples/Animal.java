@@ -16,4 +16,12 @@ public abstract class Animal {
   }
 
   public abstract void makeSound(int duration);
+
+  class Brain {
+    double volume;
+
+    void think() {
+      
+    }
+  }
 }
