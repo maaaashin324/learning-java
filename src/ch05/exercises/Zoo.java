@@ -6,11 +6,16 @@ public class Zoo {
 
   abstract class Animal {
     public abstract void speak();
+    public abstract String getSpecies();
   }
 
   class Lion extends Animal {
     public void speak() {
       System.out.print("roar");
+    }
+
+    public String getSpecies() {
+      return "Lion";
     }
   }
 
@@ -18,28 +23,33 @@ public class Zoo {
     public void speak() {
       System.out.print("hoot");
     }
+
+    public String getSpecies() {
+      return "Gibbon";
+    }
   }
 
   class Cat extends Animal {
     public void speak() {
       System.out.print("meow");
     }
+
+    public String getSpecies() {
+      return "Cat";
+    }
   }
 
   public void listen() {
-    Lion lion = new Lion();
-    Gibbon gibbon = new Gibbon();
-    Cat cat = new Cat();
-    System.out.println("Let's listen to some animals!");
-    System.out.print("The lion goes \"");
-    lion.speak();
-    System.out.println("\"");
-    System.out.print("The gibbon goes \"");
-    gibbon.speak();
-    System.out.println("\"");
-    System.out.print("The cat goes \"");
-    cat.speak();
-    System.out.println("\"");
+    System.out.println("Let's listen to our menagerie of animals!");
+
+    Animal[] menagerie = { new Lion(), new Gibbon(), new Cat() };
+
+    for (Animal animal : menagerie) {
+      String beforeMessage = String.format("The %s goes \"", animal.getSpecies());
+      System.out.print(beforeMessage);
+      animal.speak();
+      System.out.print("\"\n");
+    }
   }
 
   public static void main(String args[]) {
